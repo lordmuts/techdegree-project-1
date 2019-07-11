@@ -51,6 +51,20 @@ var quotes = [
 
 ]
 
+var backgroundColours = [
+  {
+    colour: '0000FF'
+  },
+  {
+    colour: '0000CD'
+  },
+  {
+    colour: '00008B'
+  },
+  {
+    colour: '000080'
+  },
+];
 
 
 
@@ -87,7 +101,7 @@ function printQuote() {
   
 
   output += `<p class="quote">${randomQuote.quote}</p>`;
-  output += `<p class="source">${randomQuote.source}</p>`;
+  output += `<p class="source">${randomQuote.source}`;
 
 
   if (randomQuote.citation) {
@@ -102,8 +116,23 @@ function printQuote() {
     output += `<span class="tag"> ${randomQuote.tag}</span>`;
   };
   
+  output += `</p>`;
+
   document.getElementById('quote-box').innerHTML = output;
 };
+
+function getRadomColour() {
+  
+  var ColourNumber = Math.floor(Math.random() * backgroundColours.length);
+  return backgroundColours[ColourNumber];
+};
+
+function printColour() {
+  var radomColour = getRadomColour();
+  console.log(radomColour);
+
+}
+
 
 printQuote();
 
@@ -115,7 +144,7 @@ printQuote();
   comment.
 ***/
 
-document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+document.getElementById('loadQuote').addEventListener("click", printQuote, printColour, false);
 
 
 // Remember to delete the comments that came with this file, and replace them with your own code comments.
