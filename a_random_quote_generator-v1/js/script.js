@@ -76,14 +76,10 @@ function getRandomQuote() {
 
 function getRadomColour() {
   
-  var colourNumber = Math.floor(Math.random() * backgroundColours.length);
-  console.log(colourNumber); 
-  return backgroundColours[colourNumber];
+  var colourNumber = Math.floor(Math.random() * backgroundColours.length); 
+  document.body.style.backgroundColor = backgroundColours[colourNumber];
 };
 
-function setBackgroundColor() {                                 
-  document.body.style.backgroundColor = getRadomColour()
-};
 
 
 /***
@@ -121,13 +117,15 @@ function printQuote() {
   
   output += `</p>`;
 
-  setBackgroundColor();
+  getRadomColour();
 
   document.getElementById('quote-box').innerHTML = output;
 };
 
 
-
+setInterval(function () {
+  printQuote();
+}, 2000);
 /***
   When the "Show another quote" button is clicked, the event listener 
   below will be triggered, and it will call, or "invoke", the `printQuote` 
