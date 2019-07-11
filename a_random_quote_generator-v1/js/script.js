@@ -16,45 +16,45 @@ project 1 - A Random Quote Generator
 ***/
 var quotes = [
   {
-    quote: '1',
-    source: '1',
-    citation: '',
-    year: 1111,
-    situation: '11'
+    quote: 'Knock knock',
+    source: 'JP',
+    citation: 'Facebook',
+    year: '2015',
+    situation: ''
   },
   {
-    quote: '2',
-    source: '2',
-    citation: '2222',
-    year: '222',
-    situation: '222'
+    quote: 'Live, laugh, love! ',
+    source: 'Insta girl',
+    citation: 'Facebook',
+    year: '2020',
+    situation: ''
   },
   {
-    quote: '33333',
-    source: '33',
-    citation: '',
-    year: '',
-    situation:'333'
+    quote: 'A banana has 105 calories, wine has 65. Choose wisely',
+    source: 'Santa',
+    citation: 'NewYork-Times',
+    year: '2016',
+    situation:''
   },
   {
-    quote: '44',
-    source: '444444',
-    citation: '4',
-    year: '444444',
-    situation: '4444'
+    quote: 'Trust me! You can dance!',
+    source: 'tequila',
+    citation: 'Bar',
+    year: '04:00 friday night',
+    situation: ''
   },
   {
-    quote: '55',
-    source: '5',
-    citation: '5',
-    year: '6',
+    quote: 'Fake it until you make it',
+    source: 'some dude from work',
+    citation: 'Work',
+    year: '1999',
     situation: ''
   },
 
 
 ]
 
-//console.log("aantal quote's " + quotes.length);
+
 
 
 
