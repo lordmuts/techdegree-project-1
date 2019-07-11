@@ -74,6 +74,17 @@ function getRandomQuote() {
   
 };
 
+function getRadomColour() {
+  
+  var colourNumber = Math.floor(Math.random() * backgroundColours.length);
+  console.log(colourNumber); 
+  return backgroundColours[colourNumber];
+};
+
+function setBackgroundColor() {                                 
+  document.body.style.backgroundColor = getRadomColour()
+};
+
 
 /***
   Create the `printQuote` function to: 
@@ -110,23 +121,11 @@ function printQuote() {
   
   output += `</p>`;
 
+  setBackgroundColor();
+
   document.getElementById('quote-box').innerHTML = output;
 };
 
-function getRadomColour() {
-  
-  var ColourNumber = Math.floor(Math.random() * backgroundColours.length);
-  return backgroundColours[ColourNumber];
-};
-
-function printColour() {
-  var radomColour = getRadomColour();
-  console.log(radomColour);
-
-}
-
-
-printQuote();
 
 
 /***
@@ -136,7 +135,7 @@ printQuote();
   comment.
 ***/
 
-document.getElementById('loadQuote').addEventListener("click", printQuote, printColour, false);
+document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
 
 // Remember to delete the comments that came with this file, and replace them with your own code comments.
