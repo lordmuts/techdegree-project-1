@@ -52,8 +52,8 @@ var quotes = [
 ]
 
 var backgroundColours = [
-    '#0000FF',
-    '#F5FFFA',  
+    '#FFA07A',
+    '#CD5C5C',  
     '#FFC0CB',
     '#000080'
   ];
