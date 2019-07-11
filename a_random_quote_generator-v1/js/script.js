@@ -52,19 +52,11 @@ var quotes = [
 ]
 
 var backgroundColours = [
-  {
-    colour: '0000FF'
-  },
-  {
-    colour: '0000CD'
-  },
-  {
-    colour: '00008B'
-  },
-  {
-    colour: '000080'
-  },
-];
+    '#0000FF',
+    '#F5FFFA',  
+    '#FFC0CB',
+    '#000080'
+  ];
 
 
 
