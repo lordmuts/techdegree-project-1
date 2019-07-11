@@ -20,36 +20,33 @@ var quotes = [
     source: 'JP',
     citation: 'Facebook',
     year: '2015',
-    situation: ''
+    tag: 'funny'
   },
   {
     quote: 'Live, laugh, love! ',
     source: 'Insta girl',
     citation: 'Facebook',
-    year: '2020',
-    situation: ''
+    year: '2020'
   },
   {
     quote: 'A banana has 105 calories, wine has 65. Choose wisely',
     source: 'Santa',
     citation: 'NewYork-Times',
-    year: '2016',
-    situation:''
+    year: '2016'
   },
   {
     quote: 'Trust me! You can dance!',
     source: 'tequila',
     citation: 'Bar',
-    year: '04:00 friday night',
-    situation: ''
+    year: '04:00 friday night'
   },
   {
     quote: 'Fake it until you make it',
     source: 'some dude from work',
     citation: 'Work',
     year: '1999',
-    situation: ''
-  },
+    tag: 'Work'
+  }
 
 
 ]
@@ -92,19 +89,19 @@ function printQuote() {
   output += `<p class="quote">${randomQuote.quote}</p>`;
   output += `<p class="source">${randomQuote.source}</p>`;
 
-  //console.log(randomQuote)
-  if (randomQuote.citation === '') {
-    //console.log('placeholder CITATION is emty');
-  } else output += `<p class="citation"> ${randomQuote.citation}</p>`;
-  
-  if (randomQuote.year === '') {
-    //console.log('placeholder YEAR is emty');
-  } else output += `<p class="citation"> ${randomQuote.year}</p>`;
- 
 
+  if (randomQuote.citation) {
+    output += `<span class="citation"> ${randomQuote.citation}</span>`
+  };
   
-  //console.log('output: ' + output); //staat op de website
-
+  if (randomQuote.year) {
+    output += `<span class="citation"> ${randomQuote.year}</span>`;
+  };
+   
+  if (randomQuote.tag) {
+    output += `<span class="tag"> ${randomQuote.tag}</span>`;
+  };
+  
   document.getElementById('quote-box').innerHTML = output;
 };
 
