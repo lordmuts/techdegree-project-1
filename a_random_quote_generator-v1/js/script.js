@@ -4,7 +4,7 @@ project 1 - A Random Quote Generator
 ******************************************/
 
 // Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
-
+//var printQuote;
 
 /*** 
   Create the array of quote objects and name it `quotes`.
@@ -14,7 +14,47 @@ project 1 - A Random Quote Generator
   Add the `year` property to at least one object in the array.
   Use console.log() to log your array of quotes to the console.
 ***/
+var quotes = [
+  {
+    quote: '1',
+    source: '1',
+    citation: '',
+    year: 1111,
+    situation: '11'
+  },
+  {
+    quote: '2',
+    source: '2',
+    citation: '2222',
+    year: '222',
+    situation: '222'
+  },
+  {
+    quote: '33333',
+    source: '33',
+    citation: '',
+    year: '',
+    situation:'333'
+  },
+  {
+    quote: '44',
+    source: '444444',
+    citation: '4',
+    year: '444444',
+    situation: '4444'
+  },
+  {
+    quote: '55',
+    source: '5',
+    citation: '5',
+    year: '5',
+    situation: ''
+  },
 
+
+]
+
+//console.log("aantal quote's " + quotes.length);
 
 
 
@@ -24,7 +64,12 @@ project 1 - A Random Quote Generator
    - Cse the random number to `return` a random quote object from the `quotes` array.
 ***/
 
-
+function getRandomQuote() {
+  
+  var number = Math.floor(Math.random() * quotes.length);
+  return quotes[number];
+  
+};
 
 
 /***
@@ -39,8 +84,31 @@ project 1 - A Random Quote Generator
    - Don't forget to close that final `p` tag.
    - Set the `innerHTML` of the `quote-box` div to the HTML string. 
 ***/
+function printQuote() {
+  var randomQuote = getRandomQuote();
+  var output = '';
+  
 
+  output += `<p class="quote">${randomQuote.quote}</p>`;
+  output += `<p class="source">${randomQuote.source}</p>`;
 
+  //console.log(randomQuote)
+  if (randomQuote.citation === '') {
+    //console.log('placeholder CITATION is emty');
+  } else output += `<p class="citation"> ${randomQuote.citation}</p>`;
+  
+  if (randomQuote.year === '') {
+    //console.log('placeholder YEAR is emty');
+  } else output += `<p class="citation"> ${randomQuote.year}</p>`;
+ 
+
+  
+  //console.log('output: ' + output); //staat op de website
+
+  document.getElementById('quote-box').innerHTML = output;
+};
+
+printQuote();
 
 
 /***
